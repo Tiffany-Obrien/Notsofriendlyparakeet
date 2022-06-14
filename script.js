@@ -1,4 +1,4 @@
-// Assignment Code
+// Assignment Code -what options do they have
 var generateBtn = document.querySelector("#generate");
 
 var passwordLength;
@@ -19,7 +19,7 @@ upperCase = lowerCase.map(toUpper);
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
-// Write password to the #password input
+// Add password options
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -31,7 +31,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// Start Function
+// Where it begins if/else
 function generatePassword() {
   passwordLength = prompt("How many characters would you like your password? Choose between 8 and 128");
   console.log("Password length " + passwordLength);
@@ -126,14 +126,14 @@ function generatePassword() {
   // Empty variable for the password lenght
   var passwordBlank = [];
   
-  // Loop for random selection
+  // Loop for random selection - so it keeps going
   for (var i = 0; i < passwordLength; i++) {
     var allChoices = userChoices[Math.floor(Math.random() * userChoices.length)];
     passwordBlank.push(allChoices);
     console.log(allChoices);
   }
 
-  // Join and return the password 
+  // Join and gives a password
   var password = passwordBlank.join("");
   console.log("Your Pasword is: " + password);
   return password;
